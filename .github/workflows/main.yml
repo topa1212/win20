@@ -14,7 +14,7 @@ jobs:
     - name: Download 
       run: |
         
-        Invoke-WebRequest https://github.com/topa1212/opp/releases/download/ai/data.zip -OutFile data.zip
+        Invoke-WebRequest https://github.com/topa1212/win20/releases/download/WIN20/data.zip -OutFile data.zip
            
         
     - name: ZIP UNLOCK
