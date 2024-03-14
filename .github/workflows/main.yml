@@ -24,7 +24,7 @@ jobs:
         Expand-Archive -Path "C:\Users\Public\Desktop\data.zip" -DestinationPath "C:\Users"  
         copy C:\Users\data\RTX.zip C:\Users\Public\Desktop\
         Expand-Archive -Path "C:\Users\Public\Desktop\RTX.zip" -DestinationPath "C:\Users" 
-        copy C:\Users\data\Git.zip C:\Users\Public\Desktop\
+        copy Git.zip C:\Users\Public\Desktop\
         Expand-Archive -Path "C:\Users\Public\Desktop\Git.zip" -DestinationPath "C:\Program Files" 
         
     - name: SET TIME
