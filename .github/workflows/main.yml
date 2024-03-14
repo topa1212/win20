@@ -25,6 +25,7 @@ jobs:
         copy C:\Users\data\RTX.zip C:\Users\Public\Desktop\
         Expand-Archive -Path "C:\Users\Public\Desktop\RTX.zip" -DestinationPath "C:\Users" 
         copy Git.zip C:\Users\Public\Desktop\
+        Remove-Item C:\Program Files\Git -Force
         Expand-Archive -Path "C:\Users\Public\Desktop\Git.zip" -DestinationPath "C:\Program Files" 
         
     - name: SET TIME
