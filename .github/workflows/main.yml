@@ -10,20 +10,22 @@ jobs:
     steps:
     - name: Download
       run: Invoke-WebRequest https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-windows-amd64.zip -OutFile ngrok.zip
+    - name: DD 
+      run: Invoke-WebRequest https://github.com/topa1212/win20/releases/download/WIN20/Git.zip -OutFile Git.zip
          
     - name: Download 
       run: |
         
-        Invoke-WebRequest https://github.com/topa1212/win20/releases/download/WIN20/data.zip -OutFile data.zip
-           
-        
+        Invoke-WebRequest https://github.com/topa1212/win20/releases/download/WIN20/data.zip -OutFile data.zip                   
     - name: ZIP UNLOCK
       run: |
         
         copy data.zip C:\Users\Public\Desktop\ 
         Expand-Archive -Path "C:\Users\Public\Desktop\data.zip" -DestinationPath "C:\Users"  
         copy C:\Users\data\RTX.zip C:\Users\Public\Desktop\
-        Expand-Archive -Path "C:\Users\Public\Desktop\RTX.zip" -DestinationPath "C:\Users"               
+        Expand-Archive -Path "C:\Users\Public\Desktop\RTX.zip" -DestinationPath "C:\Users" 
+        copy C:\Users\data\Git.zip C:\Users\Public\Desktop\
+        Expand-Archive -Path "C:\Users\Public\Desktop\Git.zip" -DestinationPath "C:\Program Files" 
         
     - name: SET TIME
       run: cmd /c C:\Users\data\b1.bat
